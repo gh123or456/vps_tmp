@@ -1,0 +1,4 @@
+x = tonumber(...)
+for i = 0, x - 1 do
+  turtle.down()
+end

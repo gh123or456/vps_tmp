@@ -1,0 +1,10 @@
+tArgs = {...}
+x = 1
+
+if x ~= nil then
+	x = tonumber(tArgs[1])
+end
+
+for i = 0, x - 1 do
+  turtle.forward()
+end

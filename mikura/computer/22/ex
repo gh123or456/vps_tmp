@@ -1,0 +1,51 @@
+os.loadAPI("mtable")
+local m = mtable
+local t = turtle
+
+math.randomseed(os.time())
+
+if turtle.getFuelLevel() == 0 then
+	turtle.refuel()
+end 
+
+turnTable = 
+{
+	t.turnLeft,
+	t.turnRight
+}
+
+print("set number")
+x = tonumber(read())
+	
+for i = 0, x - 1 do
+	for j = 0, 20 do
+		while t.down() do end
+		if j ~= 0 and j % 5 == 0 then
+			turnTable[math.random(2)]()
+		end
+		m.checkFuel(true)
+		while not t.forward() do
+			t.digUp()
+			t.up()
+		end
+	end
+	m.checkItem(2,true,"PlaeseItem1")
+	m.checkItem(3,true,"PlaeseItem2")
+	m.checkItem(4,true,"PlaeseItem3")
+	m.checkItem(5,true,"PlaeseItem4")
+	while t.down() do end
+	for j = 0, 1 do
+		m.move("down")
+	end
+	m.set("down",3)
+	for i = 2 , 4 do
+		m.move("up")
+		m.set("down",i)
+	end
+	if t.forward() then
+		t.down()
+		t.select(5)
+		t.placeDown()
+	end
+end
+

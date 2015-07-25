@@ -1,0 +1,6 @@
+os.loadAPI("mtable")
+
+x = tonumber(...)
+for i = 0, x - 1 do
+  mtable.move("down")
+end 
