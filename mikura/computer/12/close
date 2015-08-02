@@ -1,3 +1,0 @@
-rs.setOutput("bottom",false)
-sleep(2)
-rs.setOutput("back",true)
