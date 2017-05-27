@@ -12,3 +12,5 @@ fi
 alias ls="ls -alF"
 alias ifc="ip addr show"
 alias re="source ~/.bashrc"
+alias sd="shutdown now"
+alias eb="vim ~/.bashrc"
